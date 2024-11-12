@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -18,10 +18,9 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Run Tests
+    - name: Run the Python code
       run: |
-        # Add commands to run tests if any, e.g., pytest
-        echo "No tests specified."
+        python app.py
 
     - name: Deploy to GitHub Pages or other services
       run: |
